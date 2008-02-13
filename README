@@ -1,0 +1,9 @@
+TextilizeFu
+
+  class Article < ActiveRecord::Base
+    textilize :body
+  end
+
+This will convert the body from textile into html and store the result in body_html
+
+Based primarily off permalink_fu from Rick Olsen (technoweenie)
