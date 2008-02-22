@@ -35,7 +35,7 @@ module TextilizeFu
   
 protected
   def create_textilized_field
-    send("#{self.class.html_field}=", TextilizeFu.translate(send(self.class.textilize_attribute)))
+    send("#{self.class.html_field}=", TextilizeFu.translate(send(self.class.textilize_attribute))) unless send(self.class.textilize_attribute).nil?
   end
 
 end
